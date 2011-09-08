@@ -48,6 +48,20 @@ class Http
     }
 
     /**
+     * Adjust gzip encoding setting.
+     *
+     * @param boolean $gzip
+     *
+     * @return Http
+     */
+    public function setGzip($gzip)
+    {
+        $this->_gzip = $gzip;
+
+        return $this;
+    }
+
+    /**
      * Get the list of files to load for the request.  YUI requests files as
      * query string variables with no value (e.g. 
      * loader?yui/yui-min.js&node/node-min.js).
