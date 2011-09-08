@@ -9,6 +9,5 @@ Remaining Tasks
 ---------------
 
 * Add http://deltasys.com/license/new-bsd page
-* Detect whether client accepts gzip encoded responses
 * Support alternate module sources for combo-loading of application Javascript
 * Unit tests

@@ -99,7 +99,7 @@ class Combo
      *
      * @return string
      */
-    private function _buildContent(Request $request)
+    private function _buildContent(Request\Http $request)
     {
         $modules  = $request->getQueryFiles();
         $basePath = $this->_options->getBasePath();

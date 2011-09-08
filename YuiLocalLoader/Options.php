@@ -229,7 +229,7 @@ class Options
     public function getRequest()
     {
         if (! $this->_request) {
-            $this->_request = new Request\Http();
+            $this->_request = new Request\Http($this->_gzip);
         }
 
         return $this->_request;

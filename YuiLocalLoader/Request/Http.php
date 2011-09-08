@@ -22,6 +22,13 @@ namespace YuiLocalLoader\Request;
 
 class Http 
 {
+    private $_gzip;
+
+    public function __construct($gzip)
+    {
+        $this->_gzip = (boolean) $gzip;
+    }
+
     public function getQueryFiles()
     {
         return array_keys($_GET);
@@ -34,6 +41,8 @@ class Http
 
     public function acceptsGzip()
     {
-        return true;
+        return $this->_gzip
+            && isset($_SERVER['ACCEPT_ENCODING']) 
+            && false !== strpos($_SERVER['ACCEPT_ENCODING'], 'gzip');
     }
 }
