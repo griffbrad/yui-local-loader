@@ -14,7 +14,7 @@ YUI from the CDN on an SSL encrypted site will result in mixed content errors.
 
 You can manually load each module that you need with individual script tags.
 However, this makes dependency management very cumbersome and increases the 
-number of HTTP requests need to complete page loading, which has a major 
+number of HTTP requests needed to complete page loading, which has a major 
 negative impact on site performance.
 
 YUI Local Loader implements the YUI combo loader logic so that you can continue

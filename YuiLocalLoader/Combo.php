@@ -81,6 +81,7 @@ class Combo
         $content = $this->_buildContent($request);
 
         if ($this->_options->getGzip()) {
+            // Apply gzip encoding with compression level "9"
             $content = gzencode($content, 9);
         }
 
