@@ -26,4 +26,4 @@ Remaining Tasks
 * Add http://deltasys.com/license/new-bsd page
 * Support alternate module sources for combo-loading of application Javascript
 * Some brief end-user documentation
-* Unit tests
+* Complete unit tests
