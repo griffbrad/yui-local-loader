@@ -20,6 +20,13 @@
 
 namespace YuiLocalLoader\Cache;
 
+/**
+ * A small class to encapsulate APC function calls.  Primary useful for mocking
+ * APC during unit testing.
+ *
+ * @package YuiLocalLoader
+ * @author  Brad Griffith <bgriffith@deltasys.com>
+ */
 class Apc
 {
     /**
@@ -30,7 +37,7 @@ class Apc
     private $_cacheId;
 
     /**
-     * @param 
+     * @param string $cacheId
      */
     public function __construct($cacheId)
     {
@@ -38,7 +45,10 @@ class Apc
     }
 
     /**
+     * Retrieve response contents from APC, if available.  If a matching
+     * response is not found, this method will return false.
      *
+     * @return boolean | string
      */
     public function load()
     {
@@ -53,7 +63,11 @@ class Apc
     }
 
     /**
+     * Store response contents in APC with the specified time to live (i.e. TTL)
+     * values.
      *
+     * @param string $content
+     * @param integer $ttl
      */
     public function store($content, $ttl)
     {

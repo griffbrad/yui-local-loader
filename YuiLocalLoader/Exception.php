@@ -20,6 +20,14 @@
 
 namespace YuiLocalLoader;
 
+/**
+ * A simple exception sub-class for YuiLocalLoader.  Doesn't do anything
+ * interesting.  Just makes it easy to cache YuiLocalLoader-generated
+ * exceptions.
+ *
+ * @package YuiLocalLoader
+ * @author Brad Griffith <bgriffith@deltasys.com>
+ */
 class Exception extends \Exception
 {
     
